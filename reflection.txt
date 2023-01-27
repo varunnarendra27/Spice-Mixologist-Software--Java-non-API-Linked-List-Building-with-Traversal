@@ -1,0 +1,23 @@
+The code is in 6 separate classes that had attributes and methods. Correct variable types were used so that data is stored in the most efficient way possible. 
+This is for example shown in the choice to use arrays to hold type chars. The choice to hold them as a char came from each spice being held as a singular uppercase character. 
+In order to uphold security, I made the attributes private. For this reason, I used public getter and setter methods so that the attributes can be accessed when the class is 
+instantiated in another class. The same can be said with the other classes. For example, there is a toString method which is used to return the char array in readable string format 
+that can be outputted to the console. To do this, I had to use a getter method that passed in an int value. This allowed me to return a specific increment within the the array.
+This proved to be quite useful in the toString method as I was required to get every spice within the spicemix to be outputted. 
+
+Another class that was used was the Attempts class. The purpose of this class was to create an object which had two attributes of the previous spicemix class; a suggestion and solution.
+There is also a method NumWrongQuantity that returns the number of spices that are in the mix but in the wrong order. To do this, I used a for loop nested in another for loop with 
+int variables that stored the position of the array that we were in. When iterating through, the algorithm checks to see whether the spice actually exists in the array using the
+getspice method. If it does, the program then verifies that it is not in the same position as the solution array, indicating that the spice is right but not in the right quantity.
+This total is added up and returned.
+
+In order to hold the attempts created by the user, I had to use a linked list. This required two different classes; a node and linkedlistnode. Each node object would hold the payload and a pointer to the next node. The linkedlistnode was the class that help all these objects together, and included methods to add more nodes to the list. This worked by checking if there was a node in the class; and  making the new node equal the head of the class and making the penultamate node point to the new node.
+
+Lastly, there is a main class using a scanner obj in order to get user input for spice suggestions. This method acts a starting point for the program and outputs the UI. A spicemixgame is passed in and the program holds the types of spices in an array list so that the .contains method can be used to check if the user has inputted the correct spices. This is then passed in to create a new attempt object which is stored as a node in a linked list. 
+ 
+ 
+
+
+
+
+
